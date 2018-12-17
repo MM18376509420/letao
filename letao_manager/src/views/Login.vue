@@ -7,8 +7,9 @@
         >
       <el-form
         ref="loginFrom"
+        :rules="rules"
         :model="loginFrom"
-        label-width="60px"
+        label-width="80px"
       >
         <el-form-item label="用户名" prop="username">
           <el-input v-model="loginFrom.username"></el-input>
@@ -58,7 +59,7 @@ export default {
               this.$router.push({name: 'Home'})
             } else {
               this.$message({
-                message: '登录失败',
+                message: res.message,
                 type: 'error'
               })
             }

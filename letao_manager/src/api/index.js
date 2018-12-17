@@ -10,3 +10,51 @@ export const login = (params) => {
     return res.data
   })
 }
+// 用户查询
+export const userLits = (pa) => {
+  return axios.get('/user/queryUser', { params: pa }).then((res) => {
+    return res.data
+  })
+}
+// 用户禁用
+export const updateUser = (pa) => {
+  return axios.post('/user/updateUser', pa).then((res) => {
+    return res.data
+  })
+}
+// 分类一级查询
+export const queryTopCategory = (pa) => {
+  return axios.get('/category/queryTopCategoryPaging', { params: pa }).then((res) => {
+    return res.data
+  })
+}
+// 分类一级添加
+export const addTopCategory = (pa) => {
+  return axios.post('/category/addTopCategory', pa).then((res) => {
+    return res.data
+  })
+}
+// 分类二级查询
+export const SecondCategory = (pa) => {
+  return axios.get('/category/querySecondCategoryPaging', { params: pa }).then((res) => {
+    return res.data
+  })
+}
+// 分类二级添加
+export const addSecondCategory = (pa) => {
+  return axios.post('/category/addSecondCategory', pa).then((res) => {
+    return res.data
+  })
+}
+// 商品查询
+export const ProductDetailList = (pa) => {
+  return axios.get('/product/queryProductDetailList', { params: pa }).then((res) => {
+    return res.data
+  })
+}
+// 商品添加
+export const addProduct = (pa) => {
+  return axios.post('/product/addProduct', pa).then((res) => {
+    return res.data
+  })
+}
